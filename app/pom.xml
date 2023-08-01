@@ -11,10 +11,10 @@
 </parent>
 
 <groupId>com.example</groupId>
-<artifactId>example-spring-boot-postgres</artifactId>
+<artifactId>example-spring-boot</artifactId>
 <version>0.0.1-SNAPSHOT</version>
-<name>example-spring-boot-postgres</name>
-<description>Spring Boot Postgres Example Project</description>
+<name>example-spring-boot</name>
+<description>Spring Boot Example Project</description>
 
 <properties>
     <java.version>17</java.version>
@@ -40,10 +40,10 @@
         <optional>true</optional>
     </dependency>
 
-    <!-- DB -->
+    <!-- WEB -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
+        <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
     <!-- TESTING -->
@@ -53,23 +53,47 @@
         <scope>test</scope>
     </dependency>
 
+    <!-- SECURITY -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <!-- OAUTH -->
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-jose</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-core</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-client</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-resource-server</artifactId>
+    </dependency>
+
 </dependencies>
 
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <configuration>
-                <excludes>
-                    <exclude>
-                        <groupId>org.projectlombok</groupId>
-                        <artifactId>lombok</artifactId>
-                    </exclude>
-                </excludes>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -1,6 +1,4 @@
-# Example Spring Boot Application with Postgres
-
-Showcase how to integrate Postgres with Spring Boot.
+# Example Spring Boot Application
 
 ## Requirements
 - Java 17

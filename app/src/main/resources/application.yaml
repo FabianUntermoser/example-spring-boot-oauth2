@@ -1,0 +1,18 @@
+server:
+  port: 8084
+
+# OAUTH Client
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cas:
+            client-id: "TEST@LOCAL"
+            client-secret: "my-secret"
+            authorization-grant-type: client_credentials
+            client-name: TEST APP LOCAL 2
+            client-authentication-method: client_secret_post # important! default value is client_secret_basic
+        provider:
+          cas:
+            issuer-uri: https://localhost:8888/cas/oidc
